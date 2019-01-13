@@ -1,0 +1,52 @@
+// Importer SCSS
+
+@tailwind preflight;
+@tailwind components;
+@tailwind utilities;
+
+// Header
+.header {
+  height: 50px;
+  max-height: 70px;
+  @apply bg-grey py-4;
+}
+
+// Main
+.main {
+  min-height: 350px;
+  @apply bg-grey-lightest;
+
+  .home-view {
+    .grid-container {
+      display: grid;
+      grid-gap: 15px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .house-card {
+    @apply rounded overflow-hidden shadow-lg;
+    .image__card {
+      @apply w-full;
+    }
+    .house-card__info {
+      @apply px-6 py-4;
+      .house-info__type {
+        @apply font-bold text-grey-darker uppercase;
+      }
+      .house-info__price {
+        @apply font-semibold text-black text-4xl;
+      }
+    }
+    .house-card__author {
+      @apply px-6 pb-4;
+    }
+  }
+}
+
+// Footer
+.footer {
+  height: 240px;
+  max-height: 280px;
+  @apply bg-grey-dark py-4;
+}
